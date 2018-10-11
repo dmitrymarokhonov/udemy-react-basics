@@ -67,7 +67,7 @@ class App extends Component {
           <AppLogo backwards src={logo} alt="logo" />
         </p>
         <h1>Hi, I'm react APP</h1>
-        <Button onClick={this.togglePersondHandler}>switch name</Button>
+        <Button onClick={this.togglePersondHandler}>toggle persons</Button>
         {persons}
       </Root>
     );
