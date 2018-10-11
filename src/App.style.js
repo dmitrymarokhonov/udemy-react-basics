@@ -21,17 +21,26 @@ export const AppLogo = styled.img`
 export const Button = styled.button`
   background-color: white;
   font: inherit;
-  border: 1px solid black;
+  font-weight: bold;
+  outline: none;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border: 2px solid black;
+  border-radius: 10px;
   padding: 8px;
   cursor: pointer;
   text-transform: uppercase;
+  box-shadow: 0 2px black;
+  &:active {
+  box-shadow: 0 0 black;
+  transform: translateY(4px);
+  }
 `;
 
 export const Person = styled.div`
   border: 2px solid #eee;
   box-shadow: 0 2px 3px #ccc;
   padding: 16px;
-  width: 60%;
+  width: 50%;
   margin: 16px auto;
   text-align: center;
 `;
@@ -41,10 +50,10 @@ export const Input = styled.input`
   padding: 9px 15px;
   margin: 8px 0;
   outline: none;
-  border: 3px solid #ccc;
+  border: 2px solid #ccc;
   transition: 0.5s;
   &:focus {
     background-color: lightyellow;
-    border: 3px solid #555;
+    border: 2px solid #555;
   }
 `;
