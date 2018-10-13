@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
+import classes from "./styles.css";
 import Person from "./Person/Person";
 import { Root, AppLogo, Button } from "./App.style";
 
@@ -43,6 +44,7 @@ class App extends Component {
 
   render() {
     let persons = null;
+    let lowamount;
     if (this.state.showPersons) {
       persons = (
         <div>
@@ -60,6 +62,11 @@ class App extends Component {
         </div>
       );
     }
+
+    if(this.state.persons.length <= 2) {
+      lowamount="red";
+    }
+
     return (
       <Root>
         <p>
@@ -67,7 +74,8 @@ class App extends Component {
           <AppLogo backwards src={logo} alt="logo" />
         </p>
         <h1>Hi, I&#39;m react APP</h1>
-        <Button onClick={this.togglePersondHandler}>toggle persons</Button>
+        <Button bGColor={lowamount} onClick={this.togglePersondHandler}>toggle persons</Button>
+        <button className={classes.Whiteonblack} onClick={this.togglePersondHandler}>toggle persons</button>
         {persons}
       </Root>
     );
