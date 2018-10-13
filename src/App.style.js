@@ -19,11 +19,20 @@ export const AppLogo = styled.img`
 `;
 
 export const Button = styled.button`
-  background-color: white;
+  ${p =>
+    p.bGColor === "red"
+      ? css`
+          background-color: red;
+          color: white;
+        `
+      : css`
+          background-color: yellow;
+          color: black;
+        `};
   font: inherit;
   font-weight: bold;
   outline: none;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   border: 2px solid black;
   border-radius: 10px;
   padding: 8px;
@@ -31,8 +40,8 @@ export const Button = styled.button`
   text-transform: uppercase;
   box-shadow: 0 2px black;
   &:active {
-  box-shadow: 0 0 black;
-  transform: translateY(4px);
+    box-shadow: 0 0 black;
+    transform: translateY(4px);
   }
 `;
 
