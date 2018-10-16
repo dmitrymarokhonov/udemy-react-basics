@@ -1,0 +1,27 @@
+@keyframes spinright {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinleft {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.AppLogo {
+  animation: spinright infinite 20s linear;
+  height: 10vmin;
+}
+
+.AppLogoLeft {
+  animation: spinleft infinite 20s linear;
+  height: 10vmin;
+}

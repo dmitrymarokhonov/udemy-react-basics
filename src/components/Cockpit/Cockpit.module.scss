@@ -1,0 +1,35 @@
+%common-button {
+    font: inherit;
+    font-weight: bold;
+    outline: none;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 2px black;
+    &:active {
+      box-shadow: 0 0 black;
+      transform: translateY(4px);
+    }
+  }
+  
+  .whiteonred {
+    @extend %common-button;
+    background-color: red;
+    color: white;
+    &:hover {
+      background-color: salmon;
+    }
+  }
+  
+  .whiteongreen {
+    @extend %common-button;
+    background-color: green;
+    color: white;
+    &:hover {
+      background-color: lightgreen;
+    }
+  }
+  
